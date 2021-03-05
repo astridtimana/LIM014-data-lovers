@@ -1,0 +1,93 @@
+      
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>League of Legends</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale= 1.0, minimum-scale=1.00">
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  
+  <body id="body">
+    
+    <header>
+      <nav class="menu" id="firstNavigator">
+  
+        <img src="imagenes/League_of_Legends_Icon.png" alt="Regresa a inicio" class="lolBtn" id="lolIcon">
+  
+       <input type="checkbox" id="check">
+       <label for="check" class="checkBtn">
+        <i class="fas fa-bars"></i> 
+       </label>
+   
+       <ul class="menuOptions">
+        <li ><a class="active" href="#" id="champions">CAMPEONES</a></li>
+        <li><a href="#" id="statistics">RANKING</a></li>
+        <li><a href="#" id="about">ACERCA DE</a></li>
+        <li><a href="https://signup.euw.leagueoflegends.com/es/signup/index#/" target="_blank" id="downloadGame">JUGAR</a></li>
+       </ul>
+       
+      </nav>
+    </header>
+
+
+      <section class="logoLol" id="leagueOfLegends"> 
+        <img id="logoLol" src="imagenes/lol logo.png" >
+       <!-- El texto league of legends dorado -->
+
+        <section class="downloadGame"> 
+        <a id="championsDownload">ENCUENTRA A TU CAMPEÓN</a>
+        </section>
+      </section>
+    
+    
+    <nav class="championsMenu" id="secondNavigator">
+      <select name="allTheRoles" id="allRoles">
+        <option value="All">TODOS LOS ROLES</option>
+        <option value="Assassin">ASESINO</option>
+        <option value="Fighter">LUCHADOR</option>
+        <option value="Mage">MAGO</option>
+        <option value="Support">SOPORTE</option>
+        <option value="Tank">TANQUE</option>
+        <option value="Marksman">TIRADOR</option>
+      </select>
+      <select name="order" id="order">
+        <option disabled selected value= "-">ORDENAR</option>
+        <option value="aZ">A-Z</option>
+        <option value="zA">Z-A</option>
+      </select>
+        <section id="search">
+        <p class="searchGlass"><i class="fas fa-search" id="glass"></i></p>
+        <input id="searchBar" type="text" placeholder="BUSCAR" name="search">
+        </section>
+  
+    </nav>
+    
+   
+    <section class="storage" id="storage">
+    </section>
+
+    <section id="modalContainer">
+    </section>
+
+
+    <section class="minMax" id="minMax">
+    </section>
+   
+    
+    <section class="aboutLol" id="aboutLol">
+      <aside>
+        <h2>¿Qué es League of Legends?</h2>
+        <p>League of Legends es un juego de estrategia por equipos en el que dos equipos de cinco campeones se enfrentan para ver quién destruye antes la base del otro. Elige de entre un elenco de 140 campeones para realizar jugadas épicas, asesinar rivales y derribar torretas para alzarte con la victoria.</p>
+      </aside> 
+      <iframe  src="https://www.youtube.com/embed/mZ-Galrdsdc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <section id="imgMap"> <img src="./imagenes/Grieta del invocador.png" id="lolMap"><h3>MAPA: GRIETA DEL INVOCADOR</h3></section>
+      
+    </section>
+
+   <footer>™& © 2021 Riot Games Inc. Todos los derechos reservados</footer>
+
+    <script src="main.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/b2d0f97688.js" crossorigin="anonymous"></script>
+  </body>
+</html>
