@@ -185,7 +185,7 @@ newData.forEach((propChamp) => {
  else if(stats.armor == armorResult[1]) {armorMax = { name,img,value: stats.armor}}
 
  else if(stats.attackdamage == attackdamageResult[0]) {
-  attackMin = { name,img,value: propChamp.stats.attackdamage}}
+ attackMin = { name,img,value: propChamp.stats.attackdamage}}
 
  else if(propChamp.stats.attackdamage == attackdamageResult[1]) {attackMax = {name,img,value: propChamp.stats.attackdamage}}
 });
