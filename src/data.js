@@ -8,7 +8,6 @@ data.filter(({tags}) => tags.includes(condition));
 export const orderChampions = (data, sortBy, sortOrder) => {
   //console.log(data)
   if ( sortOrder == "aZ"){
-    
     const result = data.sort((a,b)=>{
          //console.log(a[sortBy]);
          //console.log(b[sortBy]);
@@ -18,37 +17,59 @@ export const orderChampions = (data, sortBy, sortOrder) => {
       if (b[sortBy] < a[sortBy]){
         return 1;
     }
-
-    return 0;
-
-    });
+        return 0;
+  });
     //console.log(result);
-    return result;
-    
+        return result; 
   } else {
-
     const result = data.sort((a,b)=>{
-
-      
-    if (b[sortBy] > a[sortBy]){
+      if (b[sortBy] > a[sortBy]){
       return 1;
   }
     if (b[sortBy] < a[sortBy]){
       return -1;
   }
-
-  return 0;
-
+      return 0;
   });
    //console.log(result);
-  return result;
+      return result;
   }
-  
+ 
+  //switch(sortOrder) {
+//     case "aZ": 
+//     let result1 = data.sort((a,b)=>{
+//       console.log(a[sortBy]);
+//       console.log(b[sortBy]);
+//    if (b[sortBy] > a[sortBy]){
+//      return -1
+//  }
+//    if (b[sortBy] < a[sortBy]){
+//      return 1
+//  }
+
+//  return 0
+//   });  
+//   return result1;
+
+//   break;
+
+//   case "zA": data.sort((a,b)=>{
+
+      
+//     if (b[sortBy] > a[sortBy]){
+//       return 1
+//   }
+//     if (b[sortBy] < a[sortBy]){
+//       return -1
+//   }
+
+//   return 0});
+//    break;
+//  }}; 
 }
 
 export const computeStats =  (data) => {
     // console.log(data);
-
 
   // function minMax(data) {
     return data.reduce((acc, val) => {

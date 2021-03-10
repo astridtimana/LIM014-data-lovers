@@ -4,7 +4,7 @@ import {orderChampions, filterChampions, computeStats } from './data.js';
 
 
 //VISTA INICIO
-document.getElementById("firstNavigator").style.display= "block";
+document.getElementById("firstNavigator").style.display= "block"; 
 document.getElementById("secondNavigator").style.display= "none";
 document.getElementById("storage").style.display="none";
 document.getElementById("modalContainer").style.display = "none";
@@ -170,27 +170,26 @@ let attackMin;
 let attackMax;
 
 //OBJETO para tabla
-
-
-
 newData.forEach((propChamp) => {
 
  const {name , img, stats } = propChamp;
 
- if(stats.hp == hpResult[0]) {hpMin = { name,img,value: stats.hp }}
- else if(stats.hp == hpResult[1]) {hpMax = {name,img,value: stats.hp}}
+  switch (stats.hp)  {
+    case hpResult[0]: hpMin = { name,img,value: stats.hp }; break;
+    case hpResult[1]: hpMax = {name,img,value: stats.hp} ; break;
+  }
 
- else if(stats.armor == armorResult[0]) {armorMin = {name,img, value: propChamp.stats.armor}}
+  switch(stats.armor){
+    case armorResult[0] : armorMin = {name,img, value: stats.armor}; break;
+    case armorResult[1] : armorMax = {name,img, value: stats.armor}; break;
+  }
 
- else if(stats.armor == armorResult[1]) {armorMax = { name,img,value: stats.armor}}
-
- else if(stats.attackdamage == attackdamageResult[0]) {
- attackMin = { name,img,value: propChamp.stats.attackdamage}}
-
- else if(propChamp.stats.attackdamage == attackdamageResult[1]) {attackMax = {name,img,value: propChamp.stats.attackdamage}}
+  switch(stats.attackdamage){
+    case attackdamageResult[0] : attackMin = { name,img,value:stats.attackdamage}; break;
+    case attackdamageResult[1] : attackMax = { name,img,value:stats.attackdamage}; break;
+  }
 });
 
- //console.log(table.join(""));
   let newTable =  
  `<table class="tableMinMax">
   <tr> 
@@ -272,9 +271,6 @@ newData.forEach((propChamp) => {
   </tr>
 
  </table>`
-
-
-
  document.getElementById("minMax").innerHTML = newTable;
 }
 

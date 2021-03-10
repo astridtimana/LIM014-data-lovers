@@ -39,7 +39,8 @@
     transition: opacity 100ms ease-in;
     pointer-events: none;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    
+    -ms-transition: opacity 100ms ease-in;
+    -o-transition: opacity 100ms ease-in;
 }
 
 .modalDialog:target {
@@ -642,7 +643,7 @@ caption {
     
 }
 
-@media (min-width: 320px) and (max-width: 812px){
+@media (min-width: 320px) and (max-width: 768px){
     
     body {
         background-image: url(imagenes/CaitlynCel.png);
